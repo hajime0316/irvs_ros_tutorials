@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>irvs_ros_tutorials</name>
+  <version>0.0.0</version>
+  <description>The irvs_ros_tutorials package</description>
+
+  <maintainer email="hajime0316@s.okayama-u.ac.jp">Hajime</maintainer>
+
+  <license>LGPLv3</license>
+
+  <url type="repository">https://github.com/hajime0316/irvs_ros_tutorials.git</url>
+
+  <author email="hajime0316@s.okayama-u.ac.jp">Hajime</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+  </export>
+</package>
