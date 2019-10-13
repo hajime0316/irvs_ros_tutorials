@@ -40,12 +40,12 @@ include_directories(
 # 実行ファイル、ターゲットリンクライブラリ、追加の依存関係などを設定
 add_executable(ros_tutorial_msg_publisher
 src/ros_tutorial_msg_publisher.cpp)
-target_link_libraries(ros_tutorial_msg_publisher ${catkin_LIBRARIES})
 add_dependencies(ros_tutorial_msg_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ros_tutorial_msg_publisher ${catkin_LIBRARIES})
 
 # ros_tutorial_msg_subscriberノードの設定
 # 実行ファイル、ターゲットリンクライブラリ、追加の依存関係などを設定
 add_executable(ros_tutorial_msg_subscriber
 src/ros_tutorial_msg_subscriber.cpp)
-target_link_libraries(ros_tutorial_msg_subscriber ${catkin_LIBRARIES})
 add_dependencies(ros_tutorial_msg_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ros_tutorial_msg_subscriber ${catkin_LIBRARIES})
