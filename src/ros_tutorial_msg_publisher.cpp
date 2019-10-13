@@ -1,10 +1,10 @@
-#include "irvs_ros_tutorals/msgTutorial.h"
+#include "irvs_ros_tutorials/msgTutorial.h"
 #include <ros/ros.h>
 
 int main(int argc, char** argv)
 {
     // ノード名の初期化
-    ros::init(argc, ragv, "ros_tutorial_msg_publisher");
+    ros::init(argc, argv, "ros_tutorial_msg_publisher");
     // ROSシステムとの通信のためのノードハンドルを宣言
     ros::NodeHandle nh;
 
