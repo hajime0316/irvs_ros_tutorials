@@ -5,7 +5,7 @@ bool calculation(irvs_ros_tutorials::srvTutorial::Request& req,
                  irvs_ros_tutorials::srvTutorial::Response& res)
 {
     res.result = req.a + req.b;
-    ROS_INFO("request: x = %ld", (long int)req.a, (long int)req.b);
+    ROS_INFO("request: x = %ld, y = %ld", (long int)req.a, (long int)req.b);
     ROS_INFO("sending back response: [%ld]", (long int)res.result);
 
     return true;
