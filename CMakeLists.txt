@@ -13,6 +13,12 @@ add_message_files(
   msgTutorial.msg
 )
 
+# サービスファイルの設定
+add_service_files(
+  FILES
+  srvTutorial.srv
+)
+
 # Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
@@ -49,3 +55,14 @@ add_executable(ros_tutorial_msg_subscriber
 src/ros_tutorial_msg_subscriber.cpp)
 add_dependencies(ros_tutorial_msg_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(ros_tutorial_msg_subscriber ${catkin_LIBRARIES})
+
+# ros_tutorial_srv_serverサービスサーバノードの設定
+# 実行ファイル、ターゲットリンクライブラリ、追加の依存関係などを設定
+add_executable(ros_tutorial_srv_server src/ros_tutorial_srv_server.cpp)
+add_dependencies(ros_tutorial_srv_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ros_tutorial_srv_server ${catkin_LIBRARIES})
+# ros_tutorial_srv_clientサービスクライアントノードの設定
+# 実行ファイル、ターゲットリンクライブラリ、追加の依存関係などを設定
+add_executable(ros_tutorial_srv_client src/ros_tutorial_srv_client.cpp)
+add_dependencies(ros_tutorial_srv_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ros_tutorial_srv_client ${catkin_LIBRARIES})
